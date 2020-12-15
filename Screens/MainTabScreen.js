@@ -7,6 +7,13 @@ import ProfileScreen from "./ProfileScreen";
 import SettingScreen from "./SettingScreen";
 import HeartScreen from "./HeartScreen";
 import Icon from "react-native-vector-icons/Ionicons";
+import {
+  Fontisto,
+  AntDesign,
+  Feather,
+  Entypo,
+  SimpleLineIcons,
+} from "@expo/vector-icons";
 
 const HomeStack = createStackNavigator();
 const DetailStack = createStackNavigator();
@@ -85,8 +92,10 @@ const HomeStackScreen = ({ navigation }) => (
         backgroundColor: "white",
       },
       headerTitleStyle: {
+        fontSize: 25,
         fontWeight: "bold",
-        fontStyle: "italic",
+        marginHorizontal: 50,
+        marginBottom: 10,
       },
     }}
   >
@@ -96,7 +105,16 @@ const HomeStackScreen = ({ navigation }) => (
       options={{
         title: "Discover",
         headerLeft: () => (
-          <Icon.Button
+          <Fontisto
+            name="nav-icon-grid-a"
+            size={27}
+            color="black"
+            backgroundColor="white"
+            onPress={() => {
+              navigation.openDrawer();
+            }}
+          />
+          /*<Icon.Button
             name="ios-menu"
             size={28}
             color="black"
@@ -104,7 +122,7 @@ const HomeStackScreen = ({ navigation }) => (
             onPress={() => {
               navigation.openDrawer();
             }}
-          ></Icon.Button>
+          ></Icon.Button>*/
         ),
         headerRight: () => (
           <Icon.Button

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, FlatList } from "react-native";
 
 export default function HomeScreen() {
   return (
@@ -14,9 +14,7 @@ export default function HomeScreen() {
             />
           </View>
           <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>
-              Hello from Ghana West Africa skdkfkf
-            </Text>
+            <Text style={styles.cardTitle}>Hello from Ghana West Africa</Text>
 
             <Image
               source={require("../assets/profile.jpeg")}
@@ -118,7 +116,7 @@ const styles = StyleSheet.create({
     backgroundColor: "grey",
   },
   cardsWrapper: {
-    marginTop: 5,
+    marginTop: 2,
     width: "93%",
     alignSelf: "center",
   },
@@ -134,7 +132,7 @@ const styles = StyleSheet.create({
   cardImg: {
     height: "85%",
     width: "80%",
-    marginTop: 5,
+    marginTop: 6,
     alignSelf: "center",
   },
   cardImg2: {
