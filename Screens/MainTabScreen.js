@@ -110,6 +110,7 @@ const HomeStackScreen = ({ navigation }) => (
             size={27}
             color="black"
             backgroundColor="white"
+            style={{ marginLeft: 15 }}
             onPress={() => {
               navigation.openDrawer();
             }}

@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 
-export default function HomeScreen() {
+export default function HeartScreen() {
   return (
     <View style={styles.container}>
       <Text>Heart Screen</Text>

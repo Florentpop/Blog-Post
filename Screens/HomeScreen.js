@@ -1,32 +1,36 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import { StyleSheet, Text, View, Image, FlatList } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import blogs from "./blogs";
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <View style={styles.cardsWrapper}>
-        <View style={styles.card}>
-          <View style={styles.cardImgWrapper}>
-            <Image
-              source={require("../assets/profile.jpeg")}
-              resizeMode="cover"
-              style={styles.cardImg}
-            />
-          </View>
-          <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Hello from Ghana West Africa</Text>
+      <TouchableOpacity onPress={() => navigation.navigate(blogs)}>
+        <View style={styles.cardsWrapper}>
+          <View style={styles.card}>
+            <View style={styles.cardImgWrapper}>
+              <Image
+                source={require("../assets/profile.jpeg")}
+                resizeMode="cover"
+                style={styles.cardImg}
+              />
+            </View>
+            <View style={styles.cardInfo}>
+              <Text style={styles.cardTitle}>Hello from Ghana West Africa</Text>
 
-            <Image
-              source={require("../assets/profile.jpeg")}
-              resizeMode="cover"
-              style={styles.cardImg2}
-            />
+              <Image
+                source={require("../assets/profile.jpeg")}
+                resizeMode="cover"
+                style={styles.cardImg2}
+              />
 
-            <Text style={styles.cardDetails}>John Doe</Text>
-            <Text style={styles.cardDetails2}>. 4 min read</Text>
+              <Text style={styles.cardDetails}>John Doe</Text>
+              <Text style={styles.cardDetails2}>. 4 min read</Text>
+            </View>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
 
       <View style={styles.cardsWrapper}>
         <View style={styles.card}>
